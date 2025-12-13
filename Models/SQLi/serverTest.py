@@ -3,16 +3,19 @@ aiohttp_proxy_server.py
 
 Async reverse proxy with ML-based SQL injection detection.
 """
+import os
 
 import argparse
 import asyncio
 import logging
 import json
+import sys
 from typing import Tuple, Dict, Any, Optional
 from urllib.parse import parse_qs
 
 import aiohttp
 from aiohttp import web
+import joblib
 
 # -----------------------------------------------------------
 # Logging
@@ -21,6 +24,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger("aiohttp-proxy")
 
 # Hop-by-hop headers that must NOT be forwarded
+# (Plus Content-Encoding/Length because we modify the body by decompressing it)
 HOP_BY_HOP = {
     "connection",
     "keep-alive",
@@ -30,14 +34,18 @@ HOP_BY_HOP = {
     "trailer",
     "transfer-encoding",
     "upgrade",
+    "content-encoding",  # Remove this so browser doesn't try to decompress again
+    "content-length",    # Remove this so aiohttp recalculates correct length
 }
 
 # -----------------------------------------------------------
 # Load SQL Injection ML Model
 # -----------------------------------------------------------
-import joblib
-
-sql_model = joblib.load("sql_injection_model.pkl")
+try:
+    sql_model = joblib.load("sql_injection_model.pkl")
+except Exception as e:
+    logger.error(f"Failed to load model: {e}")
+    sys.exit(1)
 
 def detect_sql_injection(text: str) -> bool:
     """Returns True if ML model predicts SQLi."""
@@ -69,17 +77,13 @@ def extract_json_values(obj):
 async def analyze_request(request, body_bytes):
     text_body = body_bytes.decode("utf-8", errors="ignore") if body_bytes else ""
 
-    # -------------------------------------------------------
-    # 1️⃣ Check URL query parameters
-    # -------------------------------------------------------
+    # 1. Check URL query parameters
     for key, value in request.query.items():
         if detect_sql_injection(value):
             logger.warning(f"Blocked SQLi in query parameter: {key}={value}")
             return False, {}, None
 
-    # -------------------------------------------------------
-    # 2️⃣ Check form-urlencoded without re-reading the body
-    # -------------------------------------------------------
+    # 2. Check form-urlencoded
     if request.content_type == "application/x-www-form-urlencoded":
         try:
             form = parse_qs(text_body)
@@ -91,9 +95,7 @@ async def analyze_request(request, body_bytes):
         except:
             pass
 
-    # -------------------------------------------------------
-    # 3️⃣ Check JSON parameters
-    # -------------------------------------------------------
+    # 3. Check JSON parameters
     if request.content_type == "application/json":
         try:
             data = json.loads(text_body)
@@ -105,17 +107,13 @@ async def analyze_request(request, body_bytes):
         except:
             pass
 
-    # -------------------------------------------------------
-    # 4️⃣ Raw body fallback only if non-JSON non-form
-    # -------------------------------------------------------
+    # 4. Raw body fallback
     if request.content_type not in ("application/json", "application/x-www-form-urlencoded"):
         if detect_sql_injection(text_body):
             logger.warning(f"Blocked SQLi in raw body")
             return False, {}, None
 
-    # All good
     return True, {}, None
-
 
 # -----------------------------------------------------------
 # Forward Request to Upstream
@@ -137,24 +135,31 @@ async def forward_request(request: web.Request, upstream_base: str, session: aio
     # Analyze before forwarding
     allow, added_headers, modified_body = await analyze_request(request, body)
     if not allow:
-        return web.Response(status=403, text="Request blocked by WAF")
+        # return web.Response(status=403, text="Request blocked by WAF")
+        return web.FileResponse('blocked.html', status=403)
 
     forward_body = modified_body if modified_body is not None else body
 
-    # Filter hop-by-hop headers
+    # Filter headers for request (Client -> Upstream)
     forward_headers = {k: v for k, v in request.headers.items() if k.lower() not in HOP_BY_HOP}
-
-    # Add headers from analyzer
     forward_headers.update(added_headers)
+    
+    # Ensure Host header is correct or let aiohttp handle it
+    if 'host' in forward_headers:
+        del forward_headers['host']
 
     method = request.method
-
-    logger.info(f"Forwarding {method} {request.rel_url} -> {upstream_url} (size={len(forward_body)})")
+    logger.info(f"Forwarding {method} {request.rel_url} -> {upstream_url}")
 
     try:
         async with session.request(method, upstream_url, headers=forward_headers, data=forward_body, allow_redirects=False) as resp:
+            # aiohttp automatically decompresses the body (gzip/deflate)
             resp_body = await resp.read()
+            
+            # Filter headers for response (Upstream -> Client)
+            # IMPORTANT: We filtered content-encoding/content-length in HOP_BY_HOP above
             resp_headers = {k: v for k, v in resp.headers.items() if k.lower() not in HOP_BY_HOP}
+            
             return web.Response(status=resp.status, body=resp_body, headers=resp_headers)
 
     except aiohttp.ClientError as e:

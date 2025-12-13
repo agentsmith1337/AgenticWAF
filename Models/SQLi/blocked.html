@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Blocked</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            float: "float 6s ease-in-out infinite",
+          },
+          keyframes: {
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-12px)" },
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 relative overflow-hidden">
+
+  <!-- Background Glow Orbs -->
+  <div class="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl top-[-80px] left-[-80px]"></div>
+  <div class="absolute w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl bottom-[-80px] right-[-80px]"></div>
+
+  <!-- Glass Card -->
+  <div class="relative z-10 max-w-lg w-full mx-4 p-8 rounded-2xl
+              bg-white/10 backdrop-blur-xl border border-white/20
+              shadow-[0_20px_50px_rgba(0,0,0,0.4)]
+              animate-float">
+
+    <!-- Icon -->
+    <div class="flex justify-center mb-6">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full
+                  bg-blue-500/20 border border-blue-400/30
+                  shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-200" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 9v2m0 4h.01M5.07 19h13.86c1.54 0 2.5-1.67 1.73-3L13.73 4c-.77-1.33-2.69-1.33-3.46 0L3.34 16c-.77 1.33.19 3 1.73 3z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <h1 class="text-center text-2xl font-semibold text-white mb-4">
+      Access Temporarily Blocked
+    </h1>
+
+    <p class="text-center text-blue-100/90 leading-relaxed">
+      <span class="font-medium text-blue-200">
+        Your request was flagged as malicious.
+      </span>
+      <br />
+      You are blocked for
+      <span class="font-semibold text-white">24 hours</span>.
+    </p>
+
+    <!-- Divider -->
+    <div class="my-6 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+
+    <!-- Footer Text -->
+    <p class="text-center text-sm text-blue-200/70">
+      If you believe this is a mistake, please contact support or try again later.
+    </p>
+  </div>
+
+</body>
+</html>
