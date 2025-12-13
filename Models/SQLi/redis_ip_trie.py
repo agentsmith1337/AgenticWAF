@@ -102,3 +102,8 @@ class RedisIPTrie:
             self.unblock_ip(ip.decode())
 
         return len(expired_ips)
+    
+    def clear_trie(self):
+        for key in self.r.scan_iter("trie:*"):
+            self.r.delete(key)
+

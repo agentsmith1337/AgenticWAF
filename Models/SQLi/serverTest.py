@@ -4,7 +4,9 @@ aiohttp_proxy_server.py
 Async reverse proxy with ML-based SQL injection detection.
 """
 import os
-
+import redis
+import time
+import uuid
 import argparse
 import asyncio
 import logging
@@ -12,6 +14,7 @@ import json
 import sys
 from typing import Tuple, Dict, Any, Optional
 from urllib.parse import parse_qs
+from redis_ip_trie import RedisIPTrie
 
 import aiohttp
 from aiohttp import web
@@ -22,6 +25,12 @@ import joblib
 # -----------------------------------------------------------
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("aiohttp-proxy")
+
+# -----------------------------------------------------------
+# Setting up redis
+# -----------------------------------------------------------
+r = redis.Redis(host="localhost", port=6379, decode_responses=False)
+trie = RedisIPTrie(r) 
 
 # Hop-by-hop headers that must NOT be forwarded
 # (Plus Content-Encoding/Length because we modify the body by decompressing it)
@@ -77,10 +86,17 @@ def extract_json_values(obj):
 async def analyze_request(request, body_bytes):
     text_body = body_bytes.decode("utf-8", errors="ignore") if body_bytes else ""
 
+    peername = request.transport.get_extra_info("peername")
+    client_ip = peername[0] if peername else None
+    if trie.is_blocked(client_ip):
+        logger.warning(f"Malicious user blocked from blacklist: {client_ip}")
+        return False, {}, None
+
     # 1. Check URL query parameters
     for key, value in request.query.items():
         if detect_sql_injection(value):
             logger.warning(f"Blocked SQLi in query parameter: {key}={value}")
+            trie.block_ip(client_ip)
             return False, {}, None
 
     # 2. Check form-urlencoded
@@ -91,6 +107,7 @@ async def analyze_request(request, body_bytes):
                 for value in values:
                     if detect_sql_injection(value):
                         logger.warning(f"Blocked SQLi in form field: {key}={value}")
+                        trie.block_ip(client_ip)
                         return False, {}, None
         except:
             pass
@@ -103,6 +120,7 @@ async def analyze_request(request, body_bytes):
                 val = "" if value is None else str(value)
                 if detect_sql_injection(val):
                     logger.warning(f"Blocked SQLi in JSON field: {key}={val}")
+                    trie.block_ip(client_ip)
                     return False, {}, None
         except:
             pass
@@ -111,6 +129,7 @@ async def analyze_request(request, body_bytes):
     if request.content_type not in ("application/json", "application/x-www-form-urlencoded"):
         if detect_sql_injection(text_body):
             logger.warning(f"Blocked SQLi in raw body")
+            trie.block_ip(client_ip)
             return False, {}, None
 
     return True, {}, None
@@ -190,6 +209,8 @@ async def create_app(upstream_base: str, timeout: int = 30) -> web.Application:
         app.router.add_route("*", "/{tail:.*}", proxy_handler)
 
         async def on_shutdown(app: web.Application):
+            trie.clear_trie()
+            logger.info("Clearing Redis Cache")
             logger.info("Shutting down client session")
             await app["client_session"].close()
 
@@ -239,4 +260,5 @@ if __name__ == "__main__":
     try:
         asyncio.run(run_app())
     except KeyboardInterrupt:
+        trie.clear_trie()
         logger.info("Interrupted, exiting...")
