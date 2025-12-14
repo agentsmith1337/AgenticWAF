@@ -1,0 +1,154 @@
+\documentclass[12pt, a4paper]{report}
+
+% Uncomment this to use Times New Roman (such as in IEEE, Elsevier)
+\usepackage{mathptmx}
+
+\title{A Web Application Firewall Using Reflex Agents In Reverse Proxy Architecture}
+\author{Abbhinav Bharadwaj}
+\date{November 2025}
+
+% Package imports
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+% Package configurations (paths, constants)
+\graphicspath{{images/}}
+
+
+
+\begin{document}
+% Optional front page
+\maketitle
+
+% Official front page 	
+{\centering
+\large{A} \\
+\Large{Project Report} \\
+\large{on} \\
+\Large{\textbf{A Web Application Firewall Using Reflex Agents In Reverse Proxy Architecture}} \\
+\vspace{5pt}
+\large{by} \\
+\large{Abbhinav Bharadwaj (2300970100003)} \\
+\large{Under the supervision of} \\
+\large{Prof. Mukesh Kumar Singh}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{logo}
+\end{figure}
+\Large{\textbf{Computer Science and Engineering}} \\
+\vspace{5pt}
+\Large{\textbf{Galgotia's College of Engineering \& Technology}} \\
+\large{Greater Noida, Uttar Pradesh} \\
+\large{India - 201306} \\
+\large{Affiliated to}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{aktu}
+\end{figure}
+\Large{\textbf{Dr. A.P.J. Abdul Kalam Technical University}}\\
+\large{Lucknow, Uttar Pradesh, India-226031}\\
+\large{December 2025}
+
+}
+
+\newpage
+
+\noindent % Prevents indentation shifting the logo
+\begin{minipage}{0.15\textwidth}
+	% FIX: Added closing ']' and '}' below
+\includegraphics[width=1.1\linewidth]{logo} 
+\end{minipage}%
+\hfill % Pushes the text block slightly to the right
+\begin{minipage}{0.85\textwidth}
+\centering
+{\Large \textbf{GALGOTIA'S COLLEGE OF} 
+\\
+\textbf{ENGINEERING \& TECHNOLOGY}
+} \\
+\small{GREATER NOIDA, UTTAR PRADESH, INDIA - 201306}	
+\end{minipage}
+
+\vspace{0.5cm} % Adds space before the certificate text starts
+\begin{center}
+\large{\textbf{CERTIFICATE}}
+\end{center}	
+\vspace{0.5cm}
+
+{
+This is to certify that the project report titled \textbf{"A Web Application Firewall Using Reflex Agents In Reverse Proxy Architecture"} submitted by \textbf{Mr. Abbhinav Bharadwaj [2300970100003]} to Galgotia's College of Engineering \& Technology, Greater Noida, Uttar Pradesh, affiliated to Dr. APJ Abdul Kalam Technical University Lucknow, U.P. in partial fulfillment for the award of Degree of Bachelor of Technology in Computer Science \& Engineering is a bonafide record of the project work carried out by them under my supervision during the year 2025-26. 
+}
+
+\vspace{2.5cm}
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+	\textbf{Prof. Mukesh Kumar Singh} \\
+	\textbf{Assistant Professor} \\
+	\textbf{Dept. of CSE}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.36\textwidth}
+	\textbf{Dr. Pushpa Choudhary} \\
+	\textbf{Professor and Head} \\
+	\textbf{Dept. of CSE} 
+\end{minipage}
+
+\newpage
+
+\noindent % Prevents indentation shifting the logo
+\begin{minipage}{0.15\textwidth}
+	% FIX: Added closing ']' and '}' below
+\includegraphics[width=1.1\linewidth]{logo} 
+\end{minipage}%
+\hfill % Pushes the text block slightly to the right
+\begin{minipage}{0.85\textwidth}
+\centering
+{\Large \textbf{GALGOTIA'S COLLEGE OF} 
+	\\
+	\textbf{ENGINEERING \& TECHNOLOGY}
+} \\
+\small{GREATER NOIDA, UTTAR PRADESH, INDIA - 201306}	
+\end{minipage}
+
+\vspace{0.5cm} % Adds space before the certificate text starts
+\begin{center}
+\large{\textbf{ACKNOWLEDGEMENT}}
+\end{center}	
+\vspace{0.5cm}
+
+I have taken my best efforts in this project. However, it would not be possible without the kind support and help of many individuals and organizations. I extend my sincere thanks to all of them.\\
+
+I am highly indebted to \textbf{Prof. Mukesh Kumar Singh} for his guidance and constant supervision. Also, I am highly thankful to them for providing necessary information and support in completing the project.\\
+
+I am extremely indebted to \textbf{Dr. Pushpa Choudhary}, HOD, Department of Computer Science and Engineering, GCET and \textbf{Ms. Lopamudra Mohanty}, Mini Project Coordinator, Department of Computer Science and Engineering, GCET for their valuable suggestions and constant support throughout my project tenure.\\ 
+
+I also express my sincere thanks to all faculty and staff members of Department of Computer Science and Engineering, GCET for their support in completing this project on time.\\
+
+I also express gratitude towards my parents for their kind co-operation and encouragement which helped me in completion of this project. Our thanks and appreciations also go to our friends in developing the project and all the people who have willingly helped me out with their abilities.\\
+
+\vspace{1cm}
+\noindent\textbf{Abbhinav Bharadwaj} \\
+\textbf{2300970100003}
+
+\newpage
+
+\begin{center}
+\large{\textbf{ABSTRACT}}
+\end{center}
+\vspace{1cm}
+
+\noindent
+This project proposes a novel approach to Web Application Firewalls by integrating reflex-agent–based decision making within a reverse proxy architecture. The system operates as middleware, inspecting incoming client requests and autonomously responding to potential threats in real time. Machine learning models are employed to monitor, detect, and act upon malicious patterns in HTTP payloads. As a proof of concept, two common web vulnerabilities-SQL Injection and Cross-Site Scripting (XSS) are addressed using Support Vector Machine and Random Forest classifiers, respectively. Experimental evaluation demonstrates detection accuracies of 97\% for SQL Injection and 95\% for XSS, indicating the effectiveness of the proposed agentic framework in enhancing adaptive web application security.
+
+\vspace{1cm}
+
+\noindent\textbf{KEYWORDS:} \textit{Reflex Agents, Reverse Proxy, SQL Injection, XSS, Support Vector Machine, Random Forest} 
+
+\newpage
+
+\begin{center}
+	\large{\textbf{CONTENTS}}
+\end{center}
+\end{document}
