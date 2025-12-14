@@ -21,16 +21,23 @@ from aiohttp import web
 import joblib
 
 # -----------------------------------------------------------
-# Logging
-# -----------------------------------------------------------
-logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-logger = logging.getLogger("aiohttp-proxy")
-
-# -----------------------------------------------------------
 # Setting up redis
 # -----------------------------------------------------------
 r = redis.Redis(host="localhost", port=6379, decode_responses=False)
 trie = RedisIPTrie(r) 
+
+# -----------------------------------------------------------
+# Logging
+# -----------------------------------------------------------
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+logger = logging.getLogger("aiohttp-proxy")
+r.set("visit",0)
+
+# -----------------------------------------------------------
+# Set up environment variables 
+# -----------------------------------------------------------
+enable_sql_waf= r.get("enable_sql_waf") != b'0'
+enable_xss_waf= r.get("enable_xss_waf") != b'0'
 
 # Hop-by-hop headers that must NOT be forwarded
 # (Plus Content-Encoding/Length because we modify the body by decompressing it)
@@ -84,8 +91,10 @@ def extract_json_values(obj):
 # WAF Analyzer
 # -----------------------------------------------------------
 async def analyze_request(request, body_bytes):
+    if (not enable_sql_waf):
+        return True, {}, None
     text_body = body_bytes.decode("utf-8", errors="ignore") if body_bytes else ""
-
+    r.incr("visit")
     peername = request.transport.get_extra_info("peername")
     client_ip = peername[0] if peername else None
     if trie.is_blocked(client_ip):
@@ -210,6 +219,8 @@ async def create_app(upstream_base: str, timeout: int = 30) -> web.Application:
 
         async def on_shutdown(app: web.Application):
             trie.clear_trie()
+            r.set("visit",0)
+            r.close()
             logger.info("Clearing Redis Cache")
             logger.info("Shutting down client session")
             await app["client_session"].close()
