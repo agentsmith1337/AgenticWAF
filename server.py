@@ -1,7 +1,7 @@
 """
-aiohttp_proxy_server.py
+server.py
 
-Async reverse proxy with ML-based SQL injection detection.
+Async reverse proxy with web vulnerability protection
 """
 import os
 import redis
@@ -38,6 +38,7 @@ r.set("visit",0)
 # -----------------------------------------------------------
 enable_sql_waf= r.get("enable_sql_waf") != b'0'
 enable_xss_waf= r.get("enable_xss_waf") != b'0'
+enable_blocking=r.get("enable_blocking") != b'0'
 
 # Hop-by-hop headers that must NOT be forwarded
 # (Plus Content-Encoding/Length because we modify the body by decompressing it)
@@ -55,13 +56,19 @@ HOP_BY_HOP = {
 }
 
 # -----------------------------------------------------------
-# Load SQL Injection ML Model
+# Load Classification models
 # -----------------------------------------------------------
-try:
-    sql_model = joblib.load("sql_injection_model.pkl")
-except Exception as e:
-    logger.error(f"Failed to load model: {e}")
-    sys.exit(1)
+if (enable_sql_waf):
+        try:
+            sql_model = joblib.load("Models/SQLi/sql_injection_model.pkl")
+        except Exception as e:
+            logger.error(f"Failed to load SQLi model: {e}")
+            sys.exit(1)
+if (enable_xss_waf):    
+        try: xss_model = joblib.load("Models/XSS/xss_detection_model.pkl")
+        except Exception as e:
+            logger.error(f"Failed to load XSS Model: {e}")
+            sys.exit(1)
 
 def detect_sql_injection(text: str) -> bool:
     """Returns True if ML model predicts SQLi."""
@@ -73,6 +80,15 @@ def detect_sql_injection(text: str) -> bool:
     except Exception:
         return False
 
+def detect_xss(text: str) -> bool:
+    """Returns True if XSS is detected"""
+    try:
+        if not text or not text.strip():
+            return False
+        pred = xss_model.predict([text])[0]
+        return pred == 1
+    except Exception:
+        return False
 
 def extract_json_values(obj):
     """Recursively extract all JSON scalar values."""
@@ -91,58 +107,104 @@ def extract_json_values(obj):
 # WAF Analyzer
 # -----------------------------------------------------------
 async def analyze_request(request, body_bytes):
-    if (not enable_sql_waf):
-        return True, {}, None
-    text_body = body_bytes.decode("utf-8", errors="ignore") if body_bytes else ""
-    r.incr("visit")
-    peername = request.transport.get_extra_info("peername")
-    client_ip = peername[0] if peername else None
-    if trie.is_blocked(client_ip):
-        logger.warning(f"Malicious user blocked from blacklist: {client_ip}")
-        return False, {}, None
+    if (enable_sql_waf):
+            text_body = body_bytes.decode("utf-8", errors="ignore") if body_bytes else ""
+            r.incr("visit")
+            peername = request.transport.get_extra_info("peername")
+            client_ip = peername[0] if peername else None
+            if trie.is_blocked(client_ip):
+                logger.warning(f"Malicious user blocked from blacklist: {client_ip}")
+                return False, {}, None
 
-    # 1. Check URL query parameters
-    for key, value in request.query.items():
-        if detect_sql_injection(value):
-            logger.warning(f"Blocked SQLi in query parameter: {key}={value}")
-            trie.block_ip(client_ip)
-            return False, {}, None
-
-    # 2. Check form-urlencoded
-    if request.content_type == "application/x-www-form-urlencoded":
-        try:
-            form = parse_qs(text_body)
-            for key, values in form.items():
-                for value in values:
-                    if detect_sql_injection(value):
-                        logger.warning(f"Blocked SQLi in form field: {key}={value}")
+            # 1. Check URL query parameters
+            for key, value in request.query.items():
+                if detect_sql_injection(value):
+                    logger.warning(f"Blocked SQLi in query parameter: {key}={value}")
+                    if (enable_blocking):
                         trie.block_ip(client_ip)
-                        return False, {}, None
-        except:
-            pass
-
-    # 3. Check JSON parameters
-    if request.content_type == "application/json":
-        try:
-            data = json.loads(text_body)
-            for key, value in extract_json_values(data):
-                val = "" if value is None else str(value)
-                if detect_sql_injection(val):
-                    logger.warning(f"Blocked SQLi in JSON field: {key}={val}")
-                    trie.block_ip(client_ip)
                     return False, {}, None
-        except:
-            pass
 
-    # 4. Raw body fallback
-    if request.content_type not in ("application/json", "application/x-www-form-urlencoded"):
-        if detect_sql_injection(text_body):
-            logger.warning(f"Blocked SQLi in raw body")
-            trie.block_ip(client_ip)
-            return False, {}, None
+            # 2. Check form-urlencoded
+            if request.content_type == "application/x-www-form-urlencoded":
+                try:
+                    form = parse_qs(text_body)
+                    for key, values in form.items():
+                        for value in values:
+                            if detect_sql_injection(value):
+                                logger.warning(f"Blocked SQLi in form field: {key}={value}")
+                                if (enable_blocking):
+                                    trie.block_ip(client_ip)
+                                return False, {}, None
+                except:
+                    pass
 
+            # 3. Check JSON parameters
+            if request.content_type == "application/json":
+                try:
+                    data = json.loads(text_body)
+                    for key, value in extract_json_values(data):
+                        val = "" if value is None else str(value)
+                        if detect_sql_injection(val):
+                            logger.warning(f"Blocked SQLi in JSON field: {key}={val}")
+                            if (enable_blocking):
+                                trie.block_ip(client_ip)
+                            return False, {}, None
+                except:
+                    pass
+
+            # 4. Raw body fallback
+            if request.content_type not in ("application/json", "application/x-www-form-urlencoded"):
+                if detect_sql_injection(text_body):
+                    logger.warning(f"Blocked SQLi in raw body")
+                    if (enable_blocking):
+                        trie.block_ip(client_ip)
+                    return False, {}, None
+
+    if (enable_xss_waf):
+                # 1. Check URL query parameters
+                for key, value in request.query.items():
+                    if detect_xss(value):
+                        logger.warning(f"Blocked XSS in query parameter: {key}={value}")
+                        if (enable_blocking):
+                            trie.block_ip(client_ip)
+                        return False, {}, None
+
+                # 2. Check form-urlencoded
+                if request.content_type == "application/x-www-form-urlencoded":
+                    try:
+                        form = parse_qs(text_body)
+                        for key, values in form.items():
+                            for value in values:
+                                if detect_xss(value):
+                                    logger.warning(f"Blocked XSS in form field: {key}={value}")
+                                    if (enable_blocking):
+                                        trie.block_ip(client_ip)
+                                    return False, {}, None
+                    except:
+                        pass
+
+                # 3. Check JSON parameters
+                if request.content_type == "application/json":
+                    try:
+                        data = json.loads(text_body)
+                        for key, value in extract_json_values(data):
+                            val = "" if value is None else str(value)
+                            if detect_xss(val):
+                                logger.warning(f"Blocked XSS in JSON field: {key}={val}")
+                                if (enable_blocking):
+                                    trie.block_ip(client_ip)
+                                return False, {}, None
+                    except:
+                        pass
+
+                # 4. Raw body fallback
+                if request.content_type not in ("application/json", "application/x-www-form-urlencoded"):
+                    if detect_xss(text_body):
+                        logger.warning(f"Blocked SQLi in raw body")
+                        if (enable_blocking):
+                            trie.block_ip(client_ip)
+                        return False, {}, None
     return True, {}, None
-
 # -----------------------------------------------------------
 # Forward Request to Upstream
 # -----------------------------------------------------------
