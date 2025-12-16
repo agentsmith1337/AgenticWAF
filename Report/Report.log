@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  15 DEC 2025 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  16 DEC 2025 08:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -102,8 +102,534 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 \WF@everypar=\toks18
 Package: wrapfig 2003/01/31  v 3.6
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-9.
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geomet
+ry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.
+sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.s
+ty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count197
+\Gm@cntv=\count198
+\c@Gm@tempcnt=\count199
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks19
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geomet
+ry.cfg))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspa
+ce.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft
+.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip50
+\cftbeforetoctitleskip=\skip51
+\cftaftertoctitleskip=\skip52
+\cftbeforepartskip=\skip53
+\cftpartnumwidth=\skip54
+\cftpartindent=\skip55
+\cftbeforechapskip=\skip56
+\cftchapindent=\skip57
+\cftchapnumwidth=\skip58
+\cftbeforesecskip=\skip59
+\cftsecindent=\skip60
+\cftsecnumwidth=\skip61
+\cftbeforesubsecskip=\skip62
+\cftsubsecindent=\skip63
+\cftsubsecnumwidth=\skip64
+\cftbeforesubsubsecskip=\skip65
+\cftsubsubsecindent=\skip66
+\cftsubsubsecnumwidth=\skip67
+\cftbeforeparaskip=\skip68
+\cftparaindent=\skip69
+\cftparanumwidth=\skip70
+\cftbeforesubparaskip=\skip71
+\cftsubparaindent=\skip72
+\cftsubparanumwidth=\skip73
+\cftbeforeloftitleskip=\skip74
+\cftafterloftitleskip=\skip75
+\cftbeforefigskip=\skip76
+\cftfigindent=\skip77
+\cftfignumwidth=\skip78
+\c@lofdepth=\count266
+\c@lotdepth=\count267
+\cftbeforelottitleskip=\skip79
+\cftafterlottitleskip=\skip80
+\cftbeforetabskip=\skip81
+\cfttabindent=\skip82
+\cfttabnumwidth=\skip83
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titles
+ec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box52
+\beforetitleunit=\skip84
+\aftertitleunit=\skip85
+\ttl@plus=\dimen153
+\ttl@minus=\dimen154
+\ttl@toksa=\toks20
+\titlewidth=\dimen155
+\titlewidthlast=\dimen156
+\titlewidthfirst=\dimen157
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlay
+er\tikz.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\
+pgf.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gfrcs.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-common.tex
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfutil-latex.def
+\pgfutil@abb=\box53
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfrcs.code.tex
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revis
+ion.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\
+pgfcore.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer
+\pgfsys.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count268
+\c@pgf@countb=\count269
+\c@pgf@countc=\count270
+\c@pgf@countd=\count271
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count272
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count273
+\pgfsyssoftpath@bigbuffer@items=\count274
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlay
+er\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.s
+ty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\co
+lor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathco
+lor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+ath.code.tex
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athutil.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athparser.code.tex
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count275
+\pgfmath@box=\box54
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.basic.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.trigonometric.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.random.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.comparison.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.base.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.round.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.misc.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfunctions.integerarithmetics.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athcalc.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+athfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count276
+))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfi
+nt.code.tex)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count277
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen189
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen193
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count278
+\pgf@shadingcount=\count279
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box58
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclaye
+r\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box59
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibili
+ty\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibili
+ty\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gffor.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\p
+gfkeys.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgfkeys.code.tex))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmat
+h.sty
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfm
+ath.code.tex))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities
+\pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
+))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count280
+\pgfplotmarksize=\dimen199
+)
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count281
+\tikznumberofchildren=\count282
+\tikznumberofcurrentchild=\count283
+\tikz@fig@count=\count284
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\p
+gfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count285
+\pgfmatrixcurrentcolumn=\count286
+\pgf@matrix@numberofcolumns=\count287
+)
+\tikz@expandcount=\count288
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/listings\listin
+gs.sty
+\lst@mode=\count289
+\lst@gtempboxa=\box64
+\lst@token=\toks33
+\lst@length=\count290
+\lst@currlwidth=\dimen264
+\lst@column=\count291
+\lst@pos=\count292
+\lst@lostspace=\dimen265
+\lst@width=\dimen266
+\lst@newlines=\count293
+\lst@lineno=\count294
+\lst@maxwidth=\dimen267
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmis
+c.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count295
+\lst@skipnumbers=\count296
+\lst@framebox=\box65
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/listings\listin
+gs.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/microtype\micro
+type.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolb
+ox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count297
+)
+\MT@toks=\toks34
+\MT@tempbox=\box66
+\MT@count=\count298
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks35
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen268
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count299
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/microtype\micro
+type-pdftex.def
+File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip86
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/microtype\micro
+type.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable
+.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip87
+\LTright=\skip88
+\LTpre=\skip89
+\LTpost=\skip90
+\LTchunksize=\count300
+\LTcapwidth=\dimen269
+\LT@head=\box67
+\LT@firsthead=\box68
+\LT@foot=\box69
+\LT@lastfoot=\box70
+\LT@gbox=\box71
+\LT@cols=\count301
+\LT@rows=\count302
+\c@LT@tables=\count303
+\c@LT@chunks=\count304
+\LT@p@ftn=\toks36
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen270
+\pgfarrowlength=\dimen271
+\pgfarrowwidth=\dimen272
+\pgfarrowlinewidth=\dimen273
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries
+/shapes\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendl
+ayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+3.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.f
 d
@@ -112,41 +638,41 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3bac
 kend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count197
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box72
 ) (Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-\big@size=\dimen145
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+\big@size=\dimen274
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\sup
 p-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
-\scratchdimen=\dimen146
-\scratchbox=\box53
-\nofMPsegments=\count199
-\nofMParguments=\count266
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count267
-\MPscratchDim=\dimen147
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count306
+\scratchdimen=\dimen275
+\scratchbox=\box73
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen276
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks38
 )
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\ep
 stopdf-base.sty
@@ -158,126 +684,353 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 df-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(108.405pt, 416.83289pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=416.83289pt
+* \textheight=700.50687pt
+* \oddsidemargin=36.13501pt
+* \evensidemargin=36.13501pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count312
+LaTeX Info: Redefining \microtypecontext on input line 53.
+Package microtype Info: Applying patch `item' on input line 53.
+Package microtype Info: Applying patch `toc' on input line 53.
+Package microtype Info: Applying patch `eqnum' on input line 53.
+Package microtype Info: Applying patch `footnote' on input line 53.
+Package microtype Info: Applying patch `verbatim' on input line 53.
+LaTeX Info: Redefining \microtypesetup on input line 53.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-pt
+m.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 21.
+ 55.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm
 .fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 21.
+ 55.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm
 .fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 21.
+ 55.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm
 .fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 21.
+ 55.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm
 .fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
  [1
 
 {C:/Users/advaitabhinav/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Us
 ers/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-<images/logo.jpeg, id=6, 984.67876pt x 979.66pt>
+<images/logo.jpeg, id=9, 984.67876pt x 979.66pt>
 File: images/logo.jpeg Graphic file (type jpg)
 <use images/logo.jpeg>
-Package pdftex.def Info: images/logo.jpeg  used on input line 37.
-(pdftex.def)             Requested size: 97.5pt x 97.00009pt.
-<images/aktu.png, id=7, 317.185pt x 317.185pt>
+Package pdftex.def Info: images/logo.jpeg  used on input line 71.
+(pdftex.def)             Requested size: 104.20822pt x 103.66707pt.
+<images/aktu.png, id=10, 317.185pt x 317.185pt>
 File: images/aktu.png Graphic file (type png)
 <use images/aktu.png>
-Package pdftex.def Info: images/aktu.png  used on input line 48.
-(pdftex.def)             Requested size: 97.5pt x 97.4987pt.
+Package pdftex.def Info: images/aktu.png  used on input line 82.
+(pdftex.def)             Requested size: 104.20822pt x 104.20674pt.
  [1 <./images/logo.jpeg> <./images/aktu.png>]
 File: images/logo.jpeg Graphic file (type jpg)
 <use images/logo.jpeg>
-Package pdftex.def Info: images/logo.jpeg  used on input line 61.
-(pdftex.def)             Requested size: 64.34773pt x 64.00899pt.
+Package pdftex.def Info: images/logo.jpeg  used on input line 95.
+(pdftex.def)             Requested size: 68.775pt x 68.41876pt.
 
-Overfull \hbox (5.85011pt too wide) in paragraph at lines 61--62
+Overfull \hbox (6.25261pt too wide) in paragraph at lines 95--96
 [][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
 [2]
 File: images/logo.jpeg Graphic file (type jpg)
 <use images/logo.jpeg>
-Package pdftex.def Info: images/logo.jpeg  used on input line 103.
-(pdftex.def)             Requested size: 64.34773pt x 64.00899pt.
+Package pdftex.def Info: images/logo.jpeg  used on input line 137.
+(pdftex.def)             Requested size: 68.775pt x 68.41876pt.
 
-Overfull \hbox (5.85011pt too wide) in paragraph at lines 103--104
+Overfull \hbox (6.25261pt too wide) in paragraph at lines 137--138
 [][] 
  []
 
+[3] [4] [5] [6] [7]
+Overfull \hbox (5.50569pt too wide) in paragraph at lines 250--288
+[] 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+[8
 
+]
+Chapter 1.
+[1
+
+
+] [2]
+Overfull \hbox (10.3584pt too wide) in paragraph at lines 348--349
+ [][] 
+ []
+
+[3]
+<images/owaspmapping.png, id=49, 469.755pt x 129.48375pt>
+File: images/owaspmapping.png Graphic file (type png)
+<use images/owaspmapping.png>
+Package pdftex.def Info: images/owaspmapping.png  used on input line 360.
+(pdftex.def)             Requested size: 416.83289pt x 114.89636pt.
+<images/CWE2025.png, id=50, 685.8122pt x 139.27031pt>
+File: images/CWE2025.png Graphic file (type png)
+<use images/CWE2025.png>
+Package pdftex.def Info: images/CWE2025.png  used on input line 367.
+(pdftex.def)             Requested size: 416.83289pt x 84.65086pt.
+ [4 <./images/owaspmapping.png> <./images/CWE2025.png>]
+Chapter 2.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+79.
+
+(C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.f
+d
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [5
+
+] [6]
+Overfull \hbox (6.12474pt too wide) in alignment at lines 446--451
+ [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
+Overfull \hbox (6.12474pt too wide) in alignment at lines 451--456
+ [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
+Overfull \hbox (6.12474pt too wide) in alignment at lines 456--460
+ [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
+Overfull \hbox (6.12474pt too wide) in alignment at lines 460--463
+ [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
+\OT1/ptm/m/n/10.95 (+20) blind, er-ror, union
  []
 
-[3] [4] [5] (Report.aux)
+
+Underfull \hbox (badness 3375) in paragraph at lines 484--484
+[]|\OT1/ptm/m/n/10.95 (+20) 7576 ma-li-cious SQL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--484
+\OT1/ptm/m/n/10.95 (+20) queries from pub-lic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\OT1/ptm/m/n/10.95 (+20) SQL in-jec-tion state-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+\OT1/ptm/m/n/10.95 (+20) ments taken from
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 503--503
+\OT1/ptm/m/n/10.95 (+20) queries from var-i-ous
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 523--523
+[]|\OT1/ptm/m/n/10.95 (+20) SQL in-jec-tions us-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
+[]|\OT1/ptm/m/n/10.95 (+20) Markov De-ci-sion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
+[]|\OT1/ptm/m/n/10.95 (+20) 1000 SQL en-vi-ron-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
+[]|\OT1/ptm/m/n/10.95 (+20) Multilayer Per-cep-
+ []
+
+
+Underfull \hbox (badness 5490) in paragraph at lines 560--560
+[]|\OT1/ptm/m/n/10.95 (+20) Progressive Neu-ral
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 560--560
+[]|\OT1/ptm/m/n/10.95 (+20) 62.2KB SQL query,
+ []
+
+
+Overfull \hbox (6.12474pt too wide) in alignment at lines 463--563
+ [] [] [] 
+ []
+
+[7] [8] [9] [10]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 620.
+
+Overfull \hbox (46.7829pt too wide) in paragraph at lines 648--649
+[][] 
+ []
+
+<images/random-forest.png, id=79, 2765.33125pt x 2001.4775pt>
+File: images/random-forest.png Graphic file (type png)
+<use images/random-forest.png>
+Package pdftex.def Info: images/random-forest.png  used on input line 654.
+(pdftex.def)             Requested size: 235.83066pt x 170.71652pt.
+[11 <./images/random-forest.png>]
+Overfull \hbox (1.20718pt too wide) in paragraph at lines 705--706
+[][] 
+ []
+
+[12]
+Chapter 3.
+[13
+
+]
+Chapter 4.
+[14
+
+]
+Chapter 5.
+[15
+
+] [16]
+Chapter 6.
+[17
+
+] [18]
+Chapter 7.
+[19
+
+]
+Chapter 8.
+(Report.bbl [20
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
+[]\OT1/ptm/m/n/10.95 (+20) M. Jack-son, ``The state of sql in-jec-tions,'' $htt
+ps : / / www . aikido . dev / blog /
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 101--104
+[]\OT1/ptm/m/n/10.95 (+20) ``A05:2025 In-jec-tion - OWASP Top 10:2025,'' $https
+ : / / owasp . org / Top10 / 2025 / A05[]
+ []
+
+[21
+
+]
+Underfull \hbox (badness 1137) in paragraph at lines 107--112
+[]\OT1/ptm/m/n/10.95 (+20) SecurityWeek, ``Mil-lions of user records stolen fro
+m 65 web-
+ []
+
+) [22] (Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1608 strings out of 474486
- 27320 string characters out of 5739979
- 1929542 words of memory out of 5000000
- 23901 multiletter control sequences out of 15000+600000
- 587528 words of font info for 88 fonts, out of 8000000 for 9000
+ 18789 strings out of 474486
+ 369852 string characters out of 5739979
+ 1974542 words of memory out of 5000000
+ 40387 multiletter control sequences out of 15000+600000
+ 616943 words of font info for 351 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,827b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
-tmb8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmr8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (6 pages, 239916 bytes).
+ 84i,10n,93p,1005b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Users/advaitabhinav/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/advaitabhinav/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/
+advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt
+12.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
+mes/utmb8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type
+1/urw/times/utmr8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on Report.pdf (31 pages, 625578 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 80422 words of extra memory for PDF output out of 89155 (max. 10000000)
 

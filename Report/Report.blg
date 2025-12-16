@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Report.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: IEEEtran.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: references.bib
+Warning--entry type for "riebesell_diagrams_2020" isn't style-file defined
+--line 305 of file references.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 19 entries,
+            4087 wiz_defined-function locations,
+            942 strings with 11870 characters,
+and the built_in function-call counts, 10859 in all, are:
+= -- 961
+> -- 222
+< -- 39
++ -- 113
+- -- 48
+* -- 518
+:= -- 1933
+add.period$ -- 38
+call.type$ -- 19
+change.case$ -- 29
+chr.to.int$ -- 63
+cite$ -- 19
+duplicate$ -- 838
+empty$ -- 837
+format.name$ -- 57
+if$ -- 2421
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 176
+newline$ -- 102
+num.names$ -- 17
+pop$ -- 385
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 848
+stack$ -- 0
+substring$ -- 203
+swap$ -- 619
+text.length$ -- 18
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 19
+warning$ -- 0
+while$ -- 32
+width$ -- 21
+write$ -- 237
+(There was 1 warning)
