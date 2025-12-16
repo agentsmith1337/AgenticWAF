@@ -23,7 +23,7 @@ import joblib
 # -----------------------------------------------------------
 # Setting up redis
 # -----------------------------------------------------------
-r = redis.Redis(host="localhost", port=6379, decode_responses=False)
+r = redis.Redis(host="localhost", port=6379, decode_responses=True)
 trie = RedisIPTrie(r) 
 
 # -----------------------------------------------------------
@@ -36,9 +36,9 @@ r.set("visit",0)
 # -----------------------------------------------------------
 # Set up environment variables 
 # -----------------------------------------------------------
-enable_sql_waf= r.get("enable_sql_waf") != b'0'
-enable_xss_waf= r.get("enable_xss_waf") != b'0'
-enable_blocking=r.get("enable_blocking") != b'0'
+enable_sql_waf= True
+enable_xss_waf= True
+enable_blocking= False
 
 # Hop-by-hop headers that must NOT be forwarded
 # (Plus Content-Encoding/Length because we modify the body by decompressing it)

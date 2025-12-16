@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAF Dashboard - Redis & Logs</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: arial;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Blue Gradient Background */
+            color: #e0f7fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+            backdrop-filter: blur(10px); /* The main glass effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            padding: 25px;
+            width: 90%;
+            max-width: 1200px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-container:hover {
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* Layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+            }
+        }
+
+        /* Typography */
+        h1 {
+            color: #ffffff;
+            /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #b3e5fc; /* Light blue for headings */
+            border-bottom: 2px solid rgba(179, 229, 252, 0.5);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Content Display */
+        pre, code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.9em;
+        }
+
+        /* Redis Variables Table */
+        .redis-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .redis-table th, .redis-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .redis-table th {
+            background-color: rgba(0, 0, 0, 0.15);
+            color: #81d4fa; /* Lighter blue for headers */
+        }
+        
+        /* Logs List */
+        .logs-list {
+            max-height: 400px;
+            overflow-y: scroll;
+            padding-right: 15px;
+        }
+
+        .logs-list p {
+            padding: 5px 0;
+            margin: 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Security Information and Event Management (SIEM)</h1>
+
+    <div class="glass-container dashboard-grid">
+
+        <div class="redis-panel">
+            <h2>Server Status</h2>
+            <div id="redis-vars-output">
+                <p>Loading Redis data...</p>
+            </div>
+        </div>
+
+        <div class="logs-panel">
+            <h2>Application Logs</h2>
+            <div id="logs-output" class="logs-list">
+                <p>Loading logs...</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        const REDIS_API_ENDPOINT = 'http://localhost:1337/admin'; // Update this if your server script uses a different path
+        const LOGS_API_ENDPOINT = 'http://localhost:1337/api/logs';       // Update this if your server script uses a different path
+
+        /**
+         * Converts the Redis variables JSON object into an HTML table string.
+         * @param {Object} data - The JSON object of key-value pairs.
+         * @returns {string} The HTML table string.
+         */
+        function formatRedisData(data) {
+            if (Object.keys(data).length === 0) {
+                return '<p>No Redis variables found or server is not running.</p>';
+            }
+
+            let html = '<table class="redis-table"><thead><tr><th>Service</th><th>Status</th></tr></thead><tbody>';
+            
+            for (const [key, value] of Object.entries(data)) {
+                // Safely convert complex values (objects, arrays) to string
+                const displayValue = (typeof value === 'object' && value !== null) 
+                    ? JSON.stringify(value, null, 2) 
+                    : String(value);
+
+                html += `<tr>
+                            <td><code>${key}</code></td>
+                            <td><pre>${displayValue}</pre></td>
+                        </tr>`;
+            }
+
+            html += '</tbody></table>';
+            return html;
+        }
+
+        /**
+         * Converts the logs array into an HTML list of paragraphs.
+         * @param {Object} data - The JSON object containing a 'logs' array.
+         * @returns {string} The HTML string for the logs list.
+         */
+        function formatLogsData(data) {
+            const logs = data.logs;
+            if (!logs || logs.length === 0) {
+                return '<p>No logs retrieved.</p>';
+            }
+
+            // Reverse the array to show the newest logs at the top
+            const reversedLogs = [...logs].reverse(); 
+            
+            let html = '';
+            reversedLogs.forEach(log => {
+                // Simple color coding for 'BLOCKED' or 'ATTACK' keywords (optional)
+                let className = '';
+                if (log.toUpperCase().includes('BLOCKED')) {
+                    className = 'style="color: #ff8a80;"'; /* Light Red */
+                } else if (log.toUpperCase().includes('ATTACK')) {
+                    className = 'style="color: #ffd740;"'; /* Amber/Yellow */
+                } else if (log.toUpperCase().includes('INFO')) {
+                    className = 'style="color: #80cbc4;"'; /* Teal */
+                }
+
+                html += `<p ${className}>${log}</p>`;
+            });
+
+            return html;
+        }
+
+
+        /**
+         * Fetches data from the API endpoints and updates the dashboard.
+         */
+        async function fetchData() {
+            const redisOutput = document.getElementById('redis-vars-output');
+            const logsOutput = document.getElementById('logs-output');
+
+            // --- Fetch Redis Variables ---
+            try {
+                const redisResponse = await fetch(REDIS_API_ENDPOINT);
+                if (!redisResponse.ok) throw new Error(`HTTP error! status: ${redisResponse.status}`);
+                const redisData = await redisResponse.json();
+                redisOutput.innerHTML = formatRedisData(redisData);
+            } catch (error) {
+                console.error("Error fetching Redis data:", error);
+                redisOutput.innerHTML = `<p style="color: #ff8a80;">Error fetching Redis data: ${error.message}. Ensure your server script has the endpoint <code>${REDIS_API_ENDPOINT}</code> implemented.</p>`;
+            }
+
+            // --- Fetch Logs ---
+            try {
+                const logsResponse = await fetch(LOGS_API_ENDPOINT);
+                if (!logsResponse.ok) throw new Error(`HTTP error! status: ${logsResponse.status}`);
+                const logsData = await logsResponse.json();
+                logsOutput.innerHTML = formatLogsData(logsData);
+            } catch (error) {
+                console.error("Error fetching logs:", error);
+                logsOutput.innerHTML = `<p style="color: #ff8a80;">Error fetching logs: ${error.message}. Ensure your server script has the endpoint <code>${LOGS_API_ENDPOINT}</code> implemented.</p>`;
+            }
+        }
+
+        // Initial fetch and set up interval for refresh
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchData();
+            // Refresh data every 5 seconds
+            setInterval(fetchData, 5000); 
+        });
+    </script>
+
+</body>
+</html>

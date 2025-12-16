@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  16 DEC 2025 09:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.3)  16 DEC 2025 09:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Report.tex
-(Report.tex
+**./Synopsis.tex
+(Synopsis.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 
@@ -629,7 +629,7 @@ ayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
-3.
+7.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.f
 d
@@ -640,23 +640,23 @@ kend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count305
 \l__pdf_internal_box=\box72
-) (Report.aux)
-\openout1 = `Report.aux'.
+) (Synopsis.aux)
+\openout1 = `Synopsis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 \big@size=\dimen274
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\sup
@@ -719,13 +719,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count312
-LaTeX Info: Redefining \microtypecontext on input line 53.
-Package microtype Info: Applying patch `item' on input line 53.
-Package microtype Info: Applying patch `toc' on input line 53.
-Package microtype Info: Applying patch `eqnum' on input line 53.
-Package microtype Info: Applying patch `footnote' on input line 53.
-Package microtype Info: Applying patch `verbatim' on input line 53.
-LaTeX Info: Redefining \microtypesetup on input line 53.
+LaTeX Info: Redefining \microtypecontext on input line 57.
+Package microtype Info: Applying patch `item' on input line 57.
+Package microtype Info: Applying patch `toc' on input line 57.
+Package microtype Info: Applying patch `eqnum' on input line 57.
+Package microtype Info: Applying patch `footnote' on input line 57.
+Package microtype Info: Applying patch `verbatim' on input line 57.
+LaTeX Info: Redefining \microtypesetup on input line 57.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -742,7 +742,7 @@ m.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 55.
+ 59.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm
 .fd
@@ -753,32 +753,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 55.
+ 59.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm
 .fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 55.
+ 59.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm
 .fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 55.
+ 59.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm
 .fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
  [1
 
 {C:/Users/advaitabhinav/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Us
@@ -786,251 +786,81 @@ ers/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 <images/logo.jpeg, id=9, 984.67876pt x 979.66pt>
 File: images/logo.jpeg Graphic file (type jpg)
 <use images/logo.jpeg>
-Package pdftex.def Info: images/logo.jpeg  used on input line 71.
+Package pdftex.def Info: images/logo.jpeg  used on input line 75.
 (pdftex.def)             Requested size: 104.20822pt x 103.66707pt.
 <images/aktu.png, id=10, 317.185pt x 317.185pt>
 File: images/aktu.png Graphic file (type png)
 <use images/aktu.png>
-Package pdftex.def Info: images/aktu.png  used on input line 82.
+Package pdftex.def Info: images/aktu.png  used on input line 86.
 (pdftex.def)             Requested size: 104.20822pt x 104.20674pt.
- [1 <./images/logo.jpeg> <./images/aktu.png>]
-File: images/logo.jpeg Graphic file (type jpg)
-<use images/logo.jpeg>
-Package pdftex.def Info: images/logo.jpeg  used on input line 95.
-(pdftex.def)             Requested size: 68.775pt x 68.41876pt.
+ [1 <./images/logo.jpeg> <./images/aktu.png>] [2]
+Chapter 1.
+[3
 
-Overfull \hbox (6.25261pt too wide) in paragraph at lines 95--96
-[][] 
- []
+] [4]
+Chapter 2.
+[5
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
-[2]
-File: images/logo.jpeg Graphic file (type jpg)
-<use images/logo.jpeg>
-Package pdftex.def Info: images/logo.jpeg  used on input line 137.
-(pdftex.def)             Requested size: 68.775pt x 68.41876pt.
-
-Overfull \hbox (6.25261pt too wide) in paragraph at lines 137--138
-[][] 
- []
-
-[3] [4] [5] [6] [7]
-Overfull \hbox (5.50569pt too wide) in paragraph at lines 250--288
-[] 
- []
-
+] [6] [7]
+Chapter 3.
 [8
 
+] [9]
+Chapter 4.
+[10
+
 ]
-Chapter 1.
-[1
-
-
-] [2]
-Overfull \hbox (10.3584pt too wide) in paragraph at lines 348--349
- [][] 
- []
-
-[3]
-<images/owaspmapping.png, id=49, 469.755pt x 129.48375pt>
-File: images/owaspmapping.png Graphic file (type png)
-<use images/owaspmapping.png>
-Package pdftex.def Info: images/owaspmapping.png  used on input line 360.
-(pdftex.def)             Requested size: 416.83289pt x 114.89636pt.
-<images/CWE2025.png, id=50, 685.8122pt x 139.27031pt>
-File: images/CWE2025.png Graphic file (type png)
-<use images/CWE2025.png>
-Package pdftex.def Info: images/CWE2025.png  used on input line 367.
-(pdftex.def)             Requested size: 416.83289pt x 84.65086pt.
- [4 <./images/owaspmapping.png> <./images/CWE2025.png>]
-Chapter 2.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-79.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+21.
 
 (C:\Users\advaitabhinav\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.f
 d
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [5
-
-] [6]
-Overfull \hbox (6.12474pt too wide) in alignment at lines 446--451
- [] [] [] 
- []
-
-
-Overfull \hbox (6.12474pt too wide) in alignment at lines 451--456
- [] [] [] 
- []
-
-
-Overfull \hbox (6.12474pt too wide) in alignment at lines 456--460
- [] [] [] 
- []
-
-
-Overfull \hbox (6.12474pt too wide) in alignment at lines 460--463
- [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
-\OT1/ptm/m/n/10.95 (+20) blind, er-ror, union
- []
-
-
-Underfull \hbox (badness 3375) in paragraph at lines 484--484
-[]|\OT1/ptm/m/n/10.95 (+20) 7576 ma-li-cious SQL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--484
-\OT1/ptm/m/n/10.95 (+20) queries from pub-lic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--492
-[]|\OT1/ptm/m/n/10.95 (+20) SQL in-jec-tion state-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 492--492
-\OT1/ptm/m/n/10.95 (+20) ments taken from
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 503--503
-\OT1/ptm/m/n/10.95 (+20) queries from var-i-ous
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 523--523
-[]|\OT1/ptm/m/n/10.95 (+20) SQL in-jec-tions us-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 545--545
-[]|\OT1/ptm/m/n/10.95 (+20) Markov De-ci-sion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 545--545
-[]|\OT1/ptm/m/n/10.95 (+20) 1000 SQL en-vi-ron-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 553--553
-[]|\OT1/ptm/m/n/10.95 (+20) Multilayer Per-cep-
- []
-
-
-Underfull \hbox (badness 5490) in paragraph at lines 560--560
-[]|\OT1/ptm/m/n/10.95 (+20) Progressive Neu-ral
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 560--560
-[]|\OT1/ptm/m/n/10.95 (+20) 62.2KB SQL query,
- []
-
-
-Overfull \hbox (6.12474pt too wide) in alignment at lines 463--563
- [] [] [] 
- []
-
-[7] [8] [9] [10]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 620.
-
-Overfull \hbox (46.7829pt too wide) in paragraph at lines 648--649
-[][] 
- []
-
-<images/random-forest.png, id=79, 2765.33125pt x 2001.4775pt>
-File: images/random-forest.png Graphic file (type png)
-<use images/random-forest.png>
-Package pdftex.def Info: images/random-forest.png  used on input line 654.
-(pdftex.def)             Requested size: 235.83066pt x 170.71652pt.
-[11 <./images/random-forest.png>]
-Overfull \hbox (1.20718pt too wide) in paragraph at lines 705--706
-[][] 
- []
-
-[12]
-Chapter 3.
-[13
+) [11] [12]
+Chapter 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 268.
+(Synopsis.bbl [13
 
 ]
-Chapter 4.
+Underfull \hbox (badness 10000) in paragraph at lines 68--74
+\OT1/ptm/m/n/12 (+20) 393988516[]Web[]Application[]Security[]Enhancement[]Throu
+gh[]Automated[]
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 84--86
+[]\OT1/ptm/m/n/12 (+20) M. Jack-son, ``The state of sql in-jec-tions,'' $https 
+: / / www . aikido . dev / blog /
+ []
+
 [14
 
-]
-Chapter 5.
-[15
-
-] [16]
-Chapter 6.
-[17
-
-] [18]
-Chapter 7.
-[19
-
-]
-Chapter 8.
-(Report.bbl [20
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 97--99
-[]\OT1/ptm/m/n/10.95 (+20) M. Jack-son, ``The state of sql in-jec-tions,'' $htt
-ps : / / www . aikido . dev / blog /
- []
-
-
-Underfull \hbox (badness 1502) in paragraph at lines 101--104
-[]\OT1/ptm/m/n/10.95 (+20) ``A05:2025 In-jec-tion - OWASP Top 10:2025,'' $https
- : / / owasp . org / Top10 / 2025 / A05[]
- []
-
-[21
-
-]
-Underfull \hbox (badness 1137) in paragraph at lines 107--112
-[]\OT1/ptm/m/n/10.95 (+20) SecurityWeek, ``Mil-lions of user records stolen fro
-m 65 web-
- []
-
-) [22] (Report.aux)
+]) [15] (Synopsis.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18786 strings out of 474486
- 369828 string characters out of 5739979
- 1974542 words of memory out of 5000000
- 40387 multiletter control sequences out of 15000+600000
- 616824 words of font info for 349 fonts, out of 8000000 for 9000
+ 18295 strings out of 474486
+ 361903 string characters out of 5739979
+ 1937542 words of memory out of 5000000
+ 40046 multiletter control sequences out of 15000+600000
+ 597968 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,93p,1005b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/advaitabhinav/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/advaitabhinav/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/
-advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt
-12.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
-mes/utmb8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type
-1/urw/times/utmr8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on Report.pdf (31 pages, 625572 bytes).
+ 84i,10n,93p,1007b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/type1/urw
+/times/utmr8a.pfb><C:/Users/advaitabhinav/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on Synopsis.pdf (16 pages, 273075 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 80422 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 62487 words of extra memory for PDF output out of 74296 (max. 10000000)
 

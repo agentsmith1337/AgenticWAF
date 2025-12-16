@@ -5,7 +5,7 @@
 
 \title{A Web Application Firewall Using Reflex Agents}
 \author{Abbhinav Bharadwaj}
-\date{November 2025}
+\date{December 2025}
 
 % Package imports
 \usepackage{graphicx}
@@ -174,7 +174,7 @@ I also express gratitude towards my parents for their kind co-operation and enco
 \vspace{1cm}
 
 \noindent
-This project implements a Web Application Firewall by integrating reflex-agent–based decision making within a reverse proxy architecture. The system operates as middleware, inspecting incoming client requests and autonomously responding to potential threats in real time. Machine learning models are employed to monitor, detect, and act upon malicious patterns in HTTP payloads. Two common web vulnerabilities-SQL Injection[CWE-89] and Cross-Site Scripting (XSS)[CWE-79] are addressed using Support Vector Machine and XGBoost classifiers, respectively. Experimental evaluation demonstrates detection accuracies of 98.54\% for SQL Injection and 96.15\% for XSS, indicating the effectiveness of the proposed agentic framework in enhancing adaptive web application security.
+This project implements a Web Application Firewall by integrating reflex-agent–based decision making within a reverse proxy architecture. The system operates as middleware, inspecting incoming client requests and autonomously responding to potential threats in real time. Machine learning models are employed to monitor, detect, and act upon malicious patterns in HTTP payloads. Two common web vulnerabilities-SQL Injection[CWE-89] and Cross-Site Scripting (XSS)[CWE-79] are addressed using XGBoost and Support Vector Machine classifiers, respectively. Experimental evaluation demonstrates detection accuracies of 98.54\% for SQL Injection and 96.15\% for XSS, indicating the effectiveness of the proposed agentic framework in enhancing adaptive web application security.
 
 \noindent\textbf{KEYWORDS:} \textit{Reflex Agents, Reverse Proxy, SQL Injection, XSS, Support Vector Machine, XGBoost} 
 
@@ -896,6 +896,8 @@ Scalability may also be impacted as the number of deployed models increases, pot
 The proposed system can be extended in several directions. The covered vulnerability classifiers can be improved by combining multiple models, or using Deep Learning for stricter security policies in a federated manner. Additional detection modules can be incorporated to handle a wider range of web vulnerabilities beyond SQL injection and XSS. 
 
 Future work may include integrating user behavior analysis and clustering techniques to enable adaptive and context-aware security policies. The use of lightweight deep learning models or ensemble decision strategies can also be explored to improve detection accuracy while maintaining low latency.
+
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
